@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import timelineValue from "../../value/milestone.json";
 import styles from "./Timeline.module.css";
 
@@ -10,6 +10,7 @@ const Timeline = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   const handlePointerDown = (e) => {
+    e.preventDefault();
     setIsDragging(true);
     containerRef.current.setPointerCapture(e.pointerId);
     setStartX(e.clientX);
@@ -38,12 +39,12 @@ const Timeline = () => {
       onPointerMove={handlePointerMove}
       onPointerUp={stopDragging}
       onPointerLeave={stopDragging}
+      onPointerCancel={stopDragging} // 新增：處理 iOS 系統中斷（如滑到邊緣）
     >
       <div className={styles.timelineTrack}>
         {timelineValue.map((yearItem) => (
           <div className={styles.yearBlock} key={yearItem.new_ID}>
             <div className={styles.yearTitle}>{yearItem.year}</div>
-
             <div className={styles.milestoneList}>
               {yearItem.milestone.map((item, index) => (
                 <div className={styles.milestoneItem} key={index}>

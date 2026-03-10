@@ -8,7 +8,9 @@
   margin-left: 50px;
   right: 0px;
   top: 0px;
-  touch-action: pan-y;
+  /* touch-action: pan-y; */
+  touch-action: none;
+  -webkit-overflow-scrolling: touch;
 }
 .timelineWrapper:active {
   cursor: grabbing;
@@ -22,22 +24,16 @@
   height: 100%;
   width: max-content;
 }
-/* 每一年區塊 */
-/* .yearBlock {
-  max-width: 500px;
-  padding: 50px 40px;
-  position: relative;
-  color: white;
-  border-right: 1px dashed rgba(255, 255, 255, 0.3);
-} */
+
 .yearBlock {
   max-width: 500px;
   padding: 50px 20px;
   position: relative;
   color: white;
   border-right: 1px dashed rgba(255, 255, 255, 0.3);
+  user-select: none;
 }
-/* 上面時間線 */
+
 .yearBlock::before {
   content: "";
   position: absolute;
