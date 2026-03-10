@@ -1,0 +1,150 @@
+.solutionInfos {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.solutionInfos .information {
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgba(17, 50, 133, 0.9);
+}
+.solutionInfos .information img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.solutionInfos .information .titleNumber {
+  font-size: 25px;
+  font-weight: bold;
+  border-right: 3px solid white;
+  height: 26px;
+  color: white;
+  line-height: 26px;
+  padding-right: 6px;
+  margin-left: 70px;
+  pointer-events: none;
+}
+.solutionInfos .information .solutionTitle {
+  font-size: 25px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 6px;
+  pointer-events: none;
+  color: white;
+}
+.solutionInfos .information:nth-child(1) {
+  background-color: rgba(247, 194, 66, 0.9);
+}
+.solutionInfos .information:nth-child(4) {
+  background-color: rgba(247, 194, 66, 0.9);
+}
+.solutionInfos .information:nth-child(5) {
+  background-color: rgba(247, 194, 66, 0.9);
+}
+.solutionInfos .information:nth-child(7) {
+  grid-column: 1 / -1;
+}
+
+.solutionInfos .information .description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 53, 53, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.3s;
+  color: white;
+}
+.solutionInfos .information .description .solutionDesc {
+  font-size: 20px;
+  width: 60%;
+  border-left: 3px solid white;
+  color: white;
+  padding-left: 12px;
+  margin-left: 65px;
+  pointer-events: none;
+}
+.solutionInfos .information .description .solutionIcon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.2;
+  margin-right: 10px;
+}
+.solutionInfos .information .description .solutionIcon img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.solutionInfos .information:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+.solutionInfos .information:hover .titleNumber {
+  opacity: 0;
+}
+.solutionInfos .information:hover .solutionTitle {
+  opacity: 0;
+}
+.solutionInfos .information:hover .description {
+  opacity: 1;
+}
+@media (max-width: 775px) {
+  .solutionInfos {
+    grid-template-columns: 1fr;
+  }
+  .solutionInfos .information:nth-child(3) {
+    background-color: rgba(247, 194, 66, 0.9);
+  }
+  .solutionInfos .information:nth-child(4) {
+    background-color: rgba(17, 50, 133, 0.9);
+  }
+  .solutionInfos .information:nth-child(7) {
+    background-color: rgba(247, 194, 66, 0.9);
+  }
+  .full {
+    grid-column: auto;
+  }
+}
+@media (max-width: 850px) {
+  .solutionInfos .information .description .solutionDesc {
+    font-size: 18px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 616px) {
+  .solutionInfos .information:nth-child(7) {
+    height: 150px;
+  }
+  .solutionInfos .information:nth-child(7) .description .solutionDesc {
+    font-size: 16px;
+  }
+}
+@media (max-width: 525px) {
+  .solutionInfos .information {
+    height: 120px;
+  }
+  .solutionInfos .information .titleNumber {
+    font-size: 20px;
+  }
+  .solutionInfos .information .solutionTitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 465px) {
+  .solutionInfos .information:nth-child(7) {
+    height: 200px;
+  }
+}

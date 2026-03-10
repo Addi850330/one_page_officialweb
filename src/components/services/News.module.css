@@ -1,0 +1,113 @@
+.slider {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.dragging {
+  cursor: grabbing;
+}
+.card {
+  width: 560px;
+  height: 480px;
+  flex: 0 0 33%;
+  scroll-snap-align: start;
+  text-decoration: none;
+}
+.card .imageWrapper {
+  width: 550px;
+  height: 70%;
+  pointer-events: none;
+  position: relative;
+}
+.card .imageWrapper .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.641);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .imageWrapper .mask div {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+}
+.card .imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .text {
+  font-size: 23px;
+  color: rgba(17, 50, 133, 0.9);
+  font-weight: bold;
+}
+.card .text h3 {
+  margin-bottom: 0px;
+}
+.card .text p {
+  color: rgba(120, 120, 120, 1);
+  margin-top: 0px;
+}
+.card:hover .imageWrapper .mask {
+  opacity: 1;
+  transition: 0.3s;
+}
+@media (max-width: 775px) {
+  .card {
+    width: 450px;
+    height: 450px;
+  }
+  .card .imageWrapper {
+    width: 450px;
+  }
+}
+@media (max-width: 680px) {
+  .card {
+    width: 400px;
+    height: 420px;
+  }
+  .card .imageWrapper {
+    width: 400px;
+  }
+  .card .text h3 {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 610px) {
+  .card {
+    width: 320px;
+    height: 300px;
+  }
+  .card .imageWrapper {
+    width: 280px;
+    height: 200px;
+  }
+  .card .text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .card {
+    width: 280px;
+    height: 300px;
+  }
+  .card .imageWrapper {
+    width: 260px;
+    height: 200px;
+  }
+  .card .text {
+    font-size: 16px;
+  }
+}

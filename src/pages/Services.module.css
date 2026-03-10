@@ -1,0 +1,25 @@
+.solutionSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.newsSection {
+  height: 662;
+  padding: 80px;
+  background: #f5f5f5;
+}
+
+.newsSection .title {
+  margin-bottom: 40px;
+  font-size: 23px;
+  font-weight: bold;
+  color: rgba(17, 50, 133, 0.9);
+}
+
+@media (max-width: 610px) {
+  .newsSection {
+    padding: 40px;
+  }
+}

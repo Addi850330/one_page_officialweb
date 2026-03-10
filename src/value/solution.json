@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1001,
+    "titleNumber": "01",
+    "solutionTitle": "電力交易平台",
+    "solutionDescription": "即刻上線，活化企業資產，增加企業韌性和收益，強化台灣電力系統彈性。",
+    "solutionIcon": "./images/services/icons/01_Icon.svg",
+    "backgroundImage": "./images/services/01_PowerTradingPlatform.jpg"
+  },
+  {
+    "id": 1002,
+    "titleNumber": "02",
+    "solutionTitle": "綠電及憑證交易",
+    "solutionDescription": "透過發用電分析與預測最佳化模型，協助企業規劃最適綠電採購策略。",
+    "solutionIcon": "./images/services/icons/02_Icon.svg",
+    "backgroundImage": "./images/services/02_GreenElectricityAndCertificateTrading.jpg"
+  },
+  {
+    "id": 1003,
+    "titleNumber": "03",
+    "solutionTitle": "節能服務｜AIoT 智慧能效管理",
+    "solutionDescription": "把用能透明化，讓節能「可診斷、可驗證、可複製」，從單點設備一路擴到多場域集中管理。",
+    "solutionIcon": "./images/services/icons/03_Icon.svg",
+    "backgroundImage": "./images/services/03_xEMSEnergyManagementSystem.jpg"
+  },
+  {
+    "id": 1004,
+    "titleNumber": "04",
+    "solutionTitle": "創能服務",
+    "solutionDescription": "整合光、水、氣、生質四大能源，為企業建構全天候、高韌性的自主供電佈局。",
+    "solutionIcon": "./images/services/icons/04_Icon.svg",
+    "backgroundImage": "./images/services/04_EnergyCreationServices.jpg"
+  },
+  {
+    "id": 1005,
+    "titleNumber": "05",
+    "solutionTitle": "儲能服務",
+    "solutionDescription": "用「價值疊加」讓儲能同時做到削峰、套利、備援、交易收益，且策略透明、壽命可控。",
+    "solutionIcon": "./images/services/icons/05_Icon.svg",
+    "backgroundImage": "./images/services/05_EnergyStorageServices.jpg"
+  },
+  {
+    "id": 1006,
+    "titleNumber": "06",
+    "solutionTitle": "充電樁",
+    "solutionDescription": "把充電站變成「可控負載＋營運平台＋CFE 節點」能降尖峰、能管維運、也能協同光儲。",
+    "solutionIcon": "./images/services/icons/06_Icon.svg",
+    "backgroundImage": "./images/services/06_ChargingPile.jpg"
+  },
+  {
+    "id": 1007,
+    "titleNumber": "07",
+    "solutionTitle": "全方位低碳能源服務",
+    "solutionDescription": "透過系統化評估、數據分析與智慧調度，並以企業用電時段分布、負載特性、關鍵製程需求、用電彈性與風險承受度等核心指標為基礎，提出最適能源配置與導入策略，為企業打造全方位、可落地的低碳能源路徑。",
+    "solutionIcon": "./images/services/icons/07_Icon.svg",
+    "backgroundImage": "./images/services/07_ComprehensiveLow-carbonEnergyServices.jpg"
+  }
+]

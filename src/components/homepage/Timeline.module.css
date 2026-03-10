@@ -1,0 +1,108 @@
+.timelineWrapper {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  background: #1e3a8a;
+  position: absolute;
+  margin-left: 50px;
+  right: 0px;
+  top: 0px;
+  touch-action: pan-y;
+}
+.timelineWrapper:active {
+  cursor: grabbing;
+}
+.timelineWrapper::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.timelineTrack {
+  display: flex;
+  height: 100%;
+  width: max-content;
+}
+/* 每一年區塊 */
+/* .yearBlock {
+  max-width: 500px;
+  padding: 50px 40px;
+  position: relative;
+  color: white;
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+} */
+.yearBlock {
+  max-width: 500px;
+  padding: 50px 20px;
+  position: relative;
+  color: white;
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+}
+/* 上面時間線 */
+.yearBlock::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+/* 線上圈圈 */
+.yearBlock::after {
+  content: "";
+  position: absolute;
+  top: 110px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #1e3a8a;
+}
+.yearBlock:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #1e3a8a;
+}
+.milestoneList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.yearTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* 每個 milestone */
+.milestoneItem {
+  margin-bottom: 30px;
+  width: 200px;
+  pointer-events: none;
+  margin-right: 20px;
+}
+
+.month {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffd54f;
+  margin-bottom: 8px;
+}
+
+.event {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+@media (max-width: 850px) {
+  .timelineWrapper {
+    width: 100%;
+    top: 40px;
+  }
+}

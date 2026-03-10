@@ -1,0 +1,173 @@
+.bannerSection {
+  width: 100%;
+}
+.aboutUsSection {
+  width: 100%;
+  position: relative;
+  color: rgba(17, 50, 133, 1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 103px;
+  padding-bottom: 103px;
+}
+.aboutUsSection .svbgc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(242, 242, 242, 1);
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.aboutUsSection .svTitle {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.aboutUsSection .svTitle .titleCH {
+  font-size: 23px;
+  font-weight: bolder;
+}
+.aboutUsSection .svTitle .titleEN {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.aboutUsSection .svInfos {
+  font-size: 20px;
+  font-weight: bolder;
+  max-width: 343px;
+}
+.aboutUsSection .svInfos .infoFirst {
+  margin-bottom: 10px;
+}
+.aboutUsSection .svTargets {
+  display: flex;
+}
+.aboutUsSection .svTargets .target {
+  width: 140px;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.aboutUsSection .svTargets .target .targeticon {
+  width: 117px;
+  height: 117px;
+  background-color: rgba(17, 50, 133, 1);
+  border-radius: 50%;
+  position: relative;
+}
+.aboutUsSection .svTargets .target .targeticon img {
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.aboutUsSection .svTargets .target .targetSub {
+  color: rgba(17, 50, 133, 1);
+}
+.aboutUsSection .svTargets .target .targetDesc {
+  color: rgba(17, 50, 133, 0.3);
+}
+.digitalDisplay {
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+}
+.digitalDisplay .anbg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  z-index: -1;
+  background-color: rgba(247, 194, 66, 0.5);
+}
+.digitalDisplay .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  z-index: -1;
+  background-color: rgba(247, 193, 66, 0.575);
+}
+.milestone {
+  width: 100%;
+  height: 600px;
+  background-color: #1e3a8a;
+  overflow: hidden;
+  position: relative;
+}
+.milestone .miletitle {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  position: absolute;
+  top: 92px;
+  right: 85%;
+}
+
+@media (max-width: 985px) {
+  .aboutUsSection {
+    padding-top: 70px;
+    justify-content: center;
+  }
+  .aboutUsSection .svTargets {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .milestone .miletitle {
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 3;
+  }
+}
+@media (max-width: 550px) {
+  .aboutUsSection .svTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .aboutUsSection .svInfos {
+    max-width: 80%;
+  }
+  .aboutUsSection .svInfos .infoFirst {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .aboutUsSection .svTargets .target {
+    width: 120px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .aboutUsSection .svTargets .target .targeticon {
+    width: 80px;
+    height: 80px;
+  }
+  .aboutUsSection .svTargets .target .targetSub {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .aboutUsSection .svTargets .target {
+    width: 105px;
+    font-size: 15px;
+  }
+}

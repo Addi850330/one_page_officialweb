@@ -1,0 +1,139 @@
+.wrapper {
+  display: flex;
+  background: #ffffff;
+  padding: 50px 100px;
+}
+
+.left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  object-fit: cover;
+}
+
+.right {
+  flex: 2;
+  padding-left: 40px;
+}
+
+form {
+  width: 100%;
+  height: auto;
+}
+
+.formGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.formGroup:nth-child(7) {
+  align-items: flex-start;
+}
+.formGroup label {
+  width: 105px;
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: rgba(17, 50, 133, 1);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.formGroup input {
+  width: 70%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #1a2c6b;
+  background-color: white;
+  outline: none;
+  font-size: 20px;
+  color: black;
+  box-sizing: border-box;
+}
+.formGroup select {
+  width: 70%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #1a2c6b;
+  background-color: white;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 20px;
+  color: black;
+}
+.formGroup textarea {
+  width: 70%;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #1a2c6b;
+  background-color: white;
+  outline: none;
+  font-size: 20px;
+  color: black;
+  box-sizing: border-box;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1a2c6b;
+}
+
+form .submitBtn {
+  margin-top: 20px;
+  margin-right: 5%;
+  padding: 12px;
+  width: 120px;
+  background-color: #1a2c6b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  bottom: 0px;
+  float: right;
+}
+
+.submitBtn:hover {
+  opacity: 0.85;
+}
+
+/* RWD */
+@media (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 50px 50px;
+  }
+
+  .left {
+    height: 250px;
+    display: none;
+  }
+
+  .right {
+    padding: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .wrapper {
+    padding: 50px 20px;
+  }
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .formGroup input {
+    width: 100%;
+  }
+  .formGroup select {
+    width: 100%;
+  }
+  .formGroup textarea {
+    width: 100%;
+    height: 200px;
+  }
+}

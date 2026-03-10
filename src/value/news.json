@@ -1,0 +1,23 @@
+[
+  {
+    "id": 2001,
+    "title": "安瑟樂威X天下雜誌經濟論壇",
+    "desc": "重新想像能源！淺談虛擬電廠",
+    "image": "./images/services/new1.webp",
+    "link": "https://www.cw.com.tw/article/5133652"
+  },
+  {
+    "id": 2002,
+    "title": "全．能源採訪鄭智文執行長",
+    "desc": "從國家戰略層級正視虛擬電廠核心價值",
+    "image": "./images/services/new2.webp",
+    "link": "https://www.energy-omni.com/product/detail/AT006016?categoryId=807ZG1CTjfHq6XsE"
+  },
+  {
+    "id": 2003,
+    "title": "中時新聞網",
+    "desc": "政府設定表後儲能元年台電將推新版時間電價吸引裝設",
+    "image": "./images/services/new3.jpeg",
+    "link": "https://www.ctee.com.tw/news/20250611702080-430503"
+  }
+]

@@ -1,0 +1,102 @@
+.carouselWindow {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.carouselTrack {
+  display: flex;
+  margin-top: 100px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.linkBtn {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.linkBtn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.controlBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  border-radius: 50%;
+  border: none;
+  background: rgba(2, 2, 2, 0.4);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftBtn {
+  width: 80px;
+  height: 80px;
+  left: 16px;
+}
+
+.rightBtn {
+  width: 80px;
+  height: 80px;
+  right: 16px;
+}
+
+.controlBtn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.controlBtn.locked {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+@media (max-width: 985px) {
+  .linkBtn {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (max-width: 700px) {
+  .linkBtn {
+    width: 60%;
+    height: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .linkBtn {
+    width: 50%;
+    height: 40%;
+  }
+}

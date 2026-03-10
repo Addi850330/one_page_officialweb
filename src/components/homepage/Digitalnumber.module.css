@@ -1,0 +1,51 @@
+.number {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.number .digitalInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.number .digitalInfo .digitalAnime {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.number .digitalInfo .digitalAnime .num {
+  font-size: 50px;
+  color: white;
+}
+.number .digitalInfo .digitalAnime .unit {
+  font-size: 15px;
+  color: white;
+}
+.number .digitalInfo .desc {
+  width: 164px;
+  height: 33px;
+  border: 3px solid rgba(255, 255, 255, 0.489);
+  border-radius: 16.5px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 33px;
+}
+.number .digitalInfo:nth-child(5) .desc {
+  width: 201px;
+}
+@media (max-width: 537px) {
+  .number .digitalInfo .digitalAnime {
+    justify-content: center;
+  }
+  .number .digitalInfo .digitalAnime .num {
+    font-size: 35px;
+    margin-right: 5px;
+  }
+}
