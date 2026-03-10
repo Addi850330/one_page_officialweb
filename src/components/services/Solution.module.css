@@ -148,3 +148,9 @@
     height: 200px;
   }
 }
+@media (max-width: 397px) {
+  .solutionInfos .information .description .solutionDesc {
+    font-size: 15px;
+    margin-left: 25px;
+  }
+}

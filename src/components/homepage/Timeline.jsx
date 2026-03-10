@@ -4,13 +4,11 @@ import styles from "./Timeline.module.css";
 
 const Timeline = () => {
   const containerRef = useRef(null);
-
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
   const handlePointerDown = (e) => {
-    e.preventDefault();
     setIsDragging(true);
     containerRef.current.setPointerCapture(e.pointerId);
     setStartX(e.clientX);
@@ -25,8 +23,9 @@ const Timeline = () => {
   };
 
   const stopDragging = (e) => {
+    if (!isDragging) return;
     setIsDragging(false);
-    if (e.pointerId) {
+    if (e.pointerId && containerRef.current) {
       containerRef.current.releasePointerCapture(e.pointerId);
     }
   };
