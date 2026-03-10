@@ -5,6 +5,10 @@ on:
     branches:
       - main # 當 main 分支有新的 push 時觸發
 
+# 加入以下這段確保機器人有權限寫入內容
+permissions:
+  contents: write
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
