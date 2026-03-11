@@ -10,6 +10,7 @@
   right: 0px;
   top: 0px;
   touch-action: pan-y;
+  /* touch-action: none; */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -20,6 +21,7 @@
 
 .dragging {
   cursor: grabbing;
+  touch-action: none;
   scroll-behavior: auto !important;
 }
 .timelineWrapper::-webkit-scrollbar {
@@ -31,6 +33,9 @@
   height: 100%;
   width: max-content;
   user-select: none;
+
+  /* 讓子元素也進入層疊上下文，減少重繪 */
+  will-change: transform;
 }
 
 .yearBlock {
