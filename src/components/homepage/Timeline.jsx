@@ -1,31 +1,43 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import timelineValue from "../../value/milestone.json";
 import styles from "./Timeline.module.css";
 
 const Timeline = () => {
   const containerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   const handlePointerDown = (e) => {
-    setIsDragging(true);
+    isDragging.current = true;
+    containerRef.current.classList.add(styles.dragging);
+
+    // 記錄初始位置
+    startX.current = e.pageX - containerRef.current.offsetLeft;
+    scrollLeft.current = containerRef.current.scrollLeft;
+
+    // 鎖定指標（防止滑出邊界失效）
     containerRef.current.setPointerCapture(e.pointerId);
-    setStartX(e.clientX);
-    setScrollLeft(containerRef.current.scrollLeft);
   };
 
   const handlePointerMove = (e) => {
-    if (!isDragging) return;
+    if (!isDragging.current) return;
 
-    const walk = e.clientX - startX;
-    containerRef.current.scrollLeft = scrollLeft - walk;
+    e.preventDefault();
+
+    const x = e.pageX - containerRef.current.offsetLeft;
+
+    const walk = (x - startX.current) * 1.5;
+    containerRef.current.scrollLeft = scrollLeft.current - walk;
   };
 
   const stopDragging = (e) => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    if (e.pointerId && containerRef.current) {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    containerRef.current.classList.remove(styles.dragging);
+
+    if (containerRef.current && e.pointerId !== undefined) {
       containerRef.current.releasePointerCapture(e.pointerId);
     }
   };
@@ -38,7 +50,7 @@ const Timeline = () => {
       onPointerMove={handlePointerMove}
       onPointerUp={stopDragging}
       onPointerLeave={stopDragging}
-      onPointerCancel={stopDragging} // 新增：處理 iOS 系統中斷（如滑到邊緣）
+      onPointerCancel={stopDragging}
     >
       <div className={styles.timelineTrack}>
         {timelineValue.map((yearItem) => (

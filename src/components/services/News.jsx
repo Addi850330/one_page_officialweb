@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import newsValue from "../../value/news.json";
 import styles from "./News.module.css";
 

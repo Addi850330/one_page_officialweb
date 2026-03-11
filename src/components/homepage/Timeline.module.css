@@ -1,7 +1,8 @@
 .timelineWrapper {
   width: 80%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   cursor: grab;
   background: #1e3a8a;
   position: absolute;
@@ -10,9 +11,16 @@
   top: 0px;
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
-.timelineWrapper:active {
+
+.timelineWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.dragging {
   cursor: grabbing;
+  scroll-behavior: auto !important;
 }
 .timelineWrapper::-webkit-scrollbar {
   display: none; /* Chrome */
@@ -22,6 +30,7 @@
   display: flex;
   height: 100%;
   width: max-content;
+  user-select: none;
 }
 
 .yearBlock {
