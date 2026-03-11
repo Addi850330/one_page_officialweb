@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import timelineValue from "../../value/milestone.json";
 import styles from "./Timeline.module.css";
 
