@@ -7,10 +7,14 @@
   margin-left: 50px;
   right: 0px;
   top: 0px;
-  -webkit-overflow-scrolling: touch;
+  /* -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
   overflow-x: scroll;
-  overflow-y: auto;
+  overflow-y: scroll; */
+  overflow-x: auto;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 
@@ -29,8 +33,8 @@
 
 .timelineTrack {
   display: flex;
-  /* height: 100%; */
-  min-height: calc(100% + 1px);
+  height: 100%;
+  /* min-height: calc(100% + 1px); */
   width: max-content;
   user-select: none;
   /* 讓子元素也進入層疊上下文，減少重繪 */
