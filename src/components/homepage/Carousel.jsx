@@ -6,20 +6,23 @@ const Carousel = ({ autoPlay = true, interval = 5000 }) => {
     {
       id: 1,
       imageUrl: "./images/home/bannerSmartCityOnline.png",
-      linkUrl: "https://xxx",
-      showLinktag: true,
+      linkUrl:
+        "https://www.accupass.com/organizer/detail/2502190935231435385892",
+      showLinktag: false,
     },
     {
       id: 2,
       imageUrl: "./images/home/bannerCWEF.png",
-      linkUrl: "https://xxx",
-      showLinktag: true,
+      linkUrl:
+        "https://www.accupass.com/organizer/detail/2502190935231435385892",
+      showLinktag: false,
     },
     {
       id: 3,
       imageUrl: "./images/home/bannerNetZero.png",
-      linkUrl: "https://xxx",
-      showLinktag: false,
+      linkUrl:
+        "https://www.accupass.com/organizer/detail/2502190935231435385892",
+      showLinktag: true,
     },
   ];
 

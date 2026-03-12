@@ -16,7 +16,7 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .number .digitalInfo .digitalAnime .num {
   font-size: 50px;
@@ -37,6 +37,24 @@
   margin-top: 10px;
   line-height: 33px;
 }
+/* ----------------- */
+.number .digitalInfo:nth-child(1) .digitalAnime .num {
+  width: 127px;
+}
+.number .digitalInfo:nth-child(2) .digitalAnime .num {
+  width: 100px;
+}
+.number .digitalInfo:nth-child(3) .digitalAnime .num {
+  width: 127px;
+}
+.number .digitalInfo:nth-child(4) .digitalAnime .num {
+  width: 226px;
+  overflow: hidden;
+}
+.number .digitalInfo:nth-child(5) .digitalAnime .num {
+  width: 127px;
+  overflow: hidden;
+}
 .number .digitalInfo:nth-child(5) .desc {
   width: 201px;
 }
@@ -47,5 +65,22 @@
   .number .digitalInfo .digitalAnime .num {
     font-size: 35px;
     margin-right: 5px;
+  }
+  .number .digitalInfo:nth-child(1) .digitalAnime .num {
+    width: 90px;
+  }
+  .number .digitalInfo:nth-child(2) .digitalAnime .num {
+    width: 75px;
+  }
+  .number .digitalInfo:nth-child(3) .digitalAnime .num {
+    width: 90px;
+  }
+  .number .digitalInfo:nth-child(4) .digitalAnime .num {
+    width: 158px;
+    overflow: hidden;
+  }
+  .number .digitalInfo:nth-child(5) .digitalAnime .num {
+    width: 90px;
+    overflow: hidden;
   }
 }
